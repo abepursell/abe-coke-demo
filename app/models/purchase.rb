@@ -1,3 +1,5 @@
+require 'httparty'
+
 class Purchase < ActiveRecord::Base
 
   before_create :create_code
@@ -21,6 +23,11 @@ class Purchase < ActiveRecord::Base
   end
 
   def send_sms
-    logger.debug "Sending SMS"
+    request_data = { :To => self.cell_number, :Body => "#{self.sender_name} has bought you a #{self.drink_type}.  Use code #{self.code.upcase} to redeem at your nearest participating vending machine.", :Token => ENV['TELAPI_TOKEN'] }
+    if Rails.env.production?
+      r = HTTParty.post("https://heroku.telapi.com/send_sms", :body => request_data)
+    else
+      r = HTTParty.post("http://dev.mydomain.com:5000/send_sms", :body => request_data)
+    end
   end
 end

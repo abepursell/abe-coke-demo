@@ -7,6 +7,7 @@ gem 'pg'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'httparty'
 
 group :production do
   gem 'rails_12factor'
