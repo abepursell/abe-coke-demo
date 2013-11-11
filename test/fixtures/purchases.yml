@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sender_name: MyString
+  cell_number: MyString
+  recipient_name: MyString
+  code: MyString
+  drink_type: MyString
+
+two:
+  sender_name: MyString
+  cell_number: MyString
+  recipient_name: MyString
+  code: MyString
+  drink_type: MyString

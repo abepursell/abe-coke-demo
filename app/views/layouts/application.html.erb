@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buy your friend a Coke</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+  <link rel="shortcut icon" href="http://us.coca-cola.com/content/dam/coca-cola/favicon.ico">
+</head>
+<body>
+  <header class="header-container">
+  <div class="image-background show-background">
+    <%= image_tag "KO-background-header.jpg", class: 'fluid' %>
+  </div>
+  <div class="navbar">
+    <div class="container">
+      <div class="large-12 columns">
+        <nav class="primary-nav">
+          <div class="left primary-nav__logo">
+            <a href="/">
+              <%= image_tag "logo.png", alt: 'Coca-Cola' %>
+            </a>
+          </div>
+          <section class="primary-nav__section">
+            <ul class="right primary-nav__list">
+              <li class="primary-nav__item trigger">
+                <a href="#" class="primary-nav__anchor">
+                  Coke in the USA
+                  <i class="icon-chevron-down primary-nav__icon"></i>
+                </a>
+                <ul class="primary-nav__sub-list dropdown">
+                  <li class="primary-nav__sub-item">
+                    <a href="http://www.coke.com/?WT.cl=1&WT.mm=top-left-menu1-coca-cola-red_en_US" target="_blank">
+                      <%= image_tag "dropdown-coca-cola-logo.png" %>
+                    </a>
+                  </li>
+                  <li class="primary-nav__sub-item gray">
+                    <a href="http://thecoca-colacompany.com/?WT.cl=1&WT.mm=top-left-menu2-tccc-red_en_US" target="_blank">
+                      <%= image_tag "menu-logo-coca-cola-company.png" %>
+                    </a>
+                  </li>
+                </ul>
+            </li>
+            <li class="primary-nav__item trigger">
+              <a href="#" class="primary-nav__anchor">
+                Change Country
+                <i class="icon-chevron-down primary-nav__icon"></i>
+              </a>
+                <ul class="primary-nav__sub-list dropdown">
+                    <li class="primary-nav__sub-item">
+                      <a href="http://www.coca-cola.com/index.jsp?cookie=false&WT.cl=1&WT.mm=top-right-menu1-changecountry-red_en_US&WT.pi=Change%20Market" target="_blank">
+                        Change Country
+                      </a>
+                    </li>
+                </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+  </div>
+</div></header>
+<div id="home" class="home">
+  <div class="parsys pageContent"><div class="basic-container section">
+    <div id="container" class="container" height="" width="">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+<div class="section pac-content">
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="image-background">
+    <%= image_tag "background-footer.jpg" %>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="large-11 large-centered columns">
+      <ul class="large-block-grid-5 inline-nav">
+
+          <li><div class="parsys"><div class="image section">
+
+    <a href="http://livepositively.com/" target="_blank">
+      <%= image_tag "live-positively.png" %>
+    </a>
+
+
+
+</div>
+
+</div>
+</li>
+
+          <li><div class="parsys"><div class="image section">
+
+    <a href="http://www.coca-colafreestyle.com/" target="_blank">
+      <%= image_tag "KO_FS_logo-dots-143-79.jpg" %>
+    </a>
+
+
+
+</div>
+
+</div>
+</li>
+
+          <li><div class="parsys"><div class="brand-chooser section">
+
+
+<p class="headline"><b><font color="FF0000">Choose </font><font color="808080">Your </font>Brand​</b></p>
+<a href="http://www.facebook.com/cocacola" class="option" target="_blank">
+  <i class="icon-chevron-sign-down indicator"></i>
+  <%= image_tag "lnkChooseCocaCola.jpg" %>
+</a>
+<a href="http://www.cokezero.com/" class="option" target="_blank">
+  <i class="icon-chevron-sign-down indicator"></i>
+  <%= image_tag "lnkChooseZero.jpg" %>
+</a>
+<a href="http://www.dietcoke.com/" class="option" target="_blank">
+  <i class="icon-chevron-sign-down indicator"></i>
+  <%= image_tag "lnkChooseDiet.jpg" %>
+</a>
+</div>
+
+</div>
+</li>
+
+          <li><div class="parsys"><div class="image section">
+
+    <a href="http://www.mycokerewards.com/">
+      <%= image_tag "mycoke-rewards.jpg" %>
+    </a>
+
+
+
+</div>
+
+</div>
+</li>
+
+          <li><div class="parsys"><div class="image section">
+
+    <a href="http://www.mycoke.com/">
+      <%= image_tag "mycoke.jpg" %>
+    </a>
+
+
+
+</div>
+
+</div>
+</li>
+
+      </ul>
+    </div>
+  </div>
+</div></div>
+
+<footer class="footer-container">
+
+<div class="container">
+  <ul class="footer__primary-nav custom-link__list">
+
+      <li class="footer__primary-nav-item custom-link__item">
+        <a href="http://www.coca-colacompany.com/our-company/" class="custom-link__anchor" target="_blank">
+          About The Coca-Cola Company
+          <i class="icon-caret-up icon-2x custom-link__anchor--caret"></i>
+        </a>
+      </li>
+
+      <li class="footer__primary-nav-item custom-link__item">
+        <a href="http://www.coca-colacompany.com/careers/" class="custom-link__anchor" target="_blank">
+          Careers
+          <i class="icon-caret-up icon-2x custom-link__anchor--caret"></i>
+        </a>
+      </li>
+
+      <li class="footer__primary-nav-item custom-link__item">
+        <a href="http://www.coca-colacompany.com/brands/the-coca-cola-company" class="custom-link__anchor" target="_blank">
+          Product Information
+          <i class="icon-caret-up icon-2x custom-link__anchor--caret"></i>
+        </a>
+      </li>
+
+      <li class="footer__primary-nav-item custom-link__item">
+        <a href="https://parks.livepositively.com/parks/NutritionConnectionFacts.pdf" class="custom-link__anchor" target="_blank">
+          Nutrition Information
+          <i class="icon-caret-up icon-2x custom-link__anchor--caret"></i>
+        </a>
+      </li>
+
+  </ul>
+  <div class="row">
+    <div class="large-4 large-centered columns">
+      <ul class="large-block-grid-3 footer__utility-nav">
+
+          <li class="footer__utility-nav-item">
+            <a href="http://www.coca-colacompany.com/contact-us/" target="_blank">
+              Contact Us<span></span>
+            </a>
+          </li>
+
+          <li class="footer__utility-nav-item">
+            <a href="/home/terms-of-use/" target="_blank">
+              Terms of Use<span></span>
+            </a>
+          </li>
+
+          <li class="footer__utility-nav-item">
+            <a href="/home/privacy-policy/" target="_blank">
+              Privacy Policy<span></span>
+            </a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+  <p class="footer__disclaimer"> © 2011 The Coca-Cola Company, all rights reserved. Coca-Cola®, "Open Happiness", and the Contour Bottle are registered trademarks of The Coca-Cola Company.</p>
+</div></footer>
+
+</body>
+</html>

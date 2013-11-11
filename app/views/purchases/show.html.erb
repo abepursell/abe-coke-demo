@@ -1,0 +1,7 @@
+<h1>Thanks <%= @purchase.sender_name %>!</h1>
+
+<p>We've sent an SMS to <strong><%= @purchase.recipient_name %></strong> with a code that they
+  can use at any Coca-Cola vending machine to redeem their free <strong><%= @purchase.drink_type %></strong>!
+</p>
+
+<p>Would you like to <%= link_to "buy another Coke?", new_purchase_url, class: 'button' %></p>

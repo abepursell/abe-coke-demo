@@ -1,0 +1,31 @@
+<h1>Buy your friend a Coke!</h1>
+<%= form_for @purchase do |f| %>
+  <h3>What type of Coke do you want to send?</h3>
+
+  <p class="drink_type">
+    <% Purchase.drink_types.each do |dt| %>
+      <%= image_tag "#{dt.gsub(' ', '')}.png", class: dt %>
+    <% end -%>
+    <%= f.hidden_field :drink_type %>
+  </p>
+
+  <h3>Your details</h3>
+  <p>
+    <%= f.label :sender_name %>
+    <%= f.text_field :sender_name %>
+  </p>
+
+  <p>
+    <%= f.label :cell_number %>
+    <%= f.text_field :cell_number %>
+    (US Numbers only)
+  </p>
+
+  <p>
+    <%= f.label :recipient_name %>
+    <%= f.text_field :recipient_name %>
+  </p>
+
+
+  <button type="submit">Buy a Coke</button>
+<% end -%>
