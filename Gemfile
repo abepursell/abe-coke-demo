@@ -4,6 +4,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 
 gem 'pg'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

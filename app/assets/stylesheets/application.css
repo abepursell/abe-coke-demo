@@ -40,7 +40,7 @@ form .drink_type input[type=checkbox] {
   display: none;
 }
 
-form img {
+form .drink_types img {
   border: 1px solid #aaa;
 }
 form img.selectedDrink {
@@ -52,4 +52,7 @@ form img.selectedDrink {
 }
 .field_with_errors input {
   border: 2px solid red;
+}
+.fb {
+  padding-top: 5px
 }

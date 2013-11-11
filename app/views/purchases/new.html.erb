@@ -12,7 +12,14 @@
   <h3>Your details</h3>
   <p>
     <%= f.label :sender_name %>
-    <%= f.text_field :sender_name %>
+    <% if user_signed_in? %>
+      <%= f.text_field :sender_name, :value => current_user.name %>
+    <% else %>
+      <%= f.text_field :sender_name %>
+      <br />
+      <label></label>
+      <%= link_to image_tag("fb_login.png", class: 'fb'), user_omniauth_authorize_path(:facebook) %>
+    <% end %>
   </p>
 
   <p>
