@@ -13,7 +13,6 @@ gem 'rack-timeout', '0.1.0beta3'
 
 group :production do
   gem 'rails_12factor'
-  gem 'newrelic_rpm'
 end
 
 # Use SCSS for stylesheets
