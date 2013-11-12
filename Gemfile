@@ -8,6 +8,8 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'httparty'
+gem 'unicorn'
+gem 'rack-timeout', '0.1.0beta3'
 
 group :production do
   gem 'rails_12factor'
