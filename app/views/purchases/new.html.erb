@@ -1,38 +1,55 @@
 <h1>Buy your friend a Coke!</h1>
-<%= form_for @purchase do |f| %>
+<%= form_for @purchase, html: {role: 'form'} do |f| %>
   <h3>What type of Coke do you want to send?</h3>
 
-  <p class="drink_type">
-    <% Purchase.drink_types.each do |dt| %>
-      <%= image_tag "#{dt.gsub(' ', '')}.png", class: dt %>
-    <% end -%>
+  <div class='form-group drink_type'>
+    <div class='row'>
+      <% Purchase.drink_types.each do |dt| %>
+        <div class='col-md-2'>
+          <%= image_tag "#{dt.gsub(' ', '')}.png", class: "#{dt} img-responsive" %>
+        </div>
+      <% end -%>
+    </div>
     <%= f.hidden_field :drink_type %>
-  </p>
+  </div>
 
   <h3>Your details</h3>
-  <p>
+  <div class='form-group'>
     <%= f.label :sender_name %>
-    <% if user_signed_in? %>
-      <%= f.text_field :sender_name, :value => current_user.name %>
-    <% else %>
-      <%= f.text_field :sender_name %>
-      <br />
-      <label></label>
-      <%= link_to image_tag("fb_login.png", class: 'fb'), user_omniauth_authorize_path(:facebook) %>
-    <% end %>
-  </p>
+    <div class="row">
+      <div class='col-md-4'>
+        <% if user_signed_in? %>
+          <%= f.text_field :sender_name, :value => current_user.name, :class => 'form-control'%>
+        <% else %>
+          <%= f.text_field :sender_name, :class => 'form-control' %>
+          <span class="help-block">
+            <%= link_to image_tag("fb_login.png", class: 'fb'), user_omniauth_authorize_path(:facebook) %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-  <p>
+  <div class='form-group'>
     <%= f.label :cell_number %>
-    <%= f.text_field :cell_number %>
-    (US Numbers only)
-  </p>
+    <div class='row'>
+      <div class='col-md-4'>
+        <%= f.text_field :cell_number, class: 'form-control' %>
+        <span class='help-block'>
+          (US Numbers only)
+        </span>
+      </div>
+    </div>
+  </div>
 
-  <p>
+  <div class='form-group'>
     <%= f.label :recipient_name %>
-    <%= f.text_field :recipient_name %>
-  </p>
+    <div class='row'>
+      <div class='col-md-4'>
+        <%= f.text_field :recipient_name, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
 
-
-  <button type="submit">Buy a Coke</button>
+  <button type="submit" class='btn btn-danger'>Buy a Coke</button>
 <% end -%>

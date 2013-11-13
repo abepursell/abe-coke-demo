@@ -12,8 +12,18 @@
  *= require_tree .
  */
 
-.pageContent {
-  min-height: 420px;
+@media (min-width: 700px) {
+  footer {
+    display: none;
+  }
+}
+.navbar-default.red, .red {
+  background-color: #f40009;
+}
+
+footer {
+  margin-top: 30px;
+  padding-top: 30px;
 }
 
 button, a.button {
@@ -41,10 +51,11 @@ form .drink_type input[type=checkbox] {
 }
 
 form .drink_types img {
-  border: 1px solid #aaa;
+  border: 1px solid #fff;
 }
+
 form img.selectedDrink {
-  border: 1px solid white;
+  border: 1px solid #f40009;
 }
 
 .field_with_errors {
