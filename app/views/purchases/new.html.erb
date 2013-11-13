@@ -6,7 +6,7 @@
     <div class='row'>
       <% Purchase.drink_types.each do |dt| %>
         <div class='col-md-2'>
-          <%= image_tag "#{dt.gsub(' ', '')}.png", class: "#{dt} img-responsive" %>
+          <%= image_tag "#{dt.gsub(' ', '')}.png", class: "#{dt}" %>
         </div>
       <% end -%>
     </div>
